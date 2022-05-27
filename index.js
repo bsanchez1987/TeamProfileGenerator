@@ -112,4 +112,50 @@ function addEngineer() {
 
   }
 
-  
+  function addIntern() {
+    inquirer.prompt([
+      
+      {
+        type: "input",
+        name: "internName",
+        message: "What is the intern's name?"
+      },
+
+      {
+        type: "input",
+        name: "internId",
+        message: "What is the intern's employee ID number?" 
+      },
+
+      {
+        type: "input",
+        name: "internEmail",
+        message: "What is the intern's email address?"
+      },
+
+      {
+        type: "input",
+        name: "internSchool",
+        message: "What school does the intern attend?"
+      }
+
+    ]).then(answers => {
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+      teamArray.push(intern);
+      createTeam();
+    });
+
+  }
+
+  function htmlBuilder () {
+    console.log("Team Profile Made!")
+
+    fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
+
+}
+
+createTeam();
+
+}
+
+runApp();
