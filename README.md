@@ -36,4 +36,4 @@ THEN I exit the application, and the HTML is generated
 
 ## Walkthrough
 
-https://drive.google.com/file/d/1cWuWIGRCPBl_9eQSGPSBIRTofaxh0tPA/view
+C:\Users\bsanc\OneDrive\Desktop\BootCamp\TeamProfileGenerator\TeamProfileGenerator\assets\Team Profile Generator.webm
